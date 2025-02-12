@@ -1,0 +1,23 @@
+package com.example.demo.libraries;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class WebDriverLibrary {
+
+    @Bean
+    public WebDriver getChromeDriver() {
+        WebDriverManager.chromedriver().setup();
+
+        WebDriver webDriver = new ChromeDriver();
+
+        // Maximize the browser window
+        webDriver.manage().window().maximize();
+
+        return webDriver;
+    }
+}
