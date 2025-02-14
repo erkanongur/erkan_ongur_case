@@ -12,8 +12,6 @@ This project is a Selenium-based automation framework written in Java. It enable
 ## Prerequisites
 - Java 17
 - Maven
-- Selenium WebDriver
-- TestNG or JUnit
 
 ## Installation
 1. Clone the repository:
@@ -34,22 +32,6 @@ This project is a Selenium-based automation framework written in Java. It enable
   ```sh
   mvn test
   ```
-- To run tests using TestNG:
-  ```sh
-  mvn test -DsuiteXmlFile=testng.xml
-  ```
-
-## Reporting
-- Test execution results are available in the `reports` directory.
-- Extent Reports provide a detailed test summary with logs and screenshots.
-
-## Contribution
-Feel free to fork this repository and contribute by creating pull requests. Ensure your changes follow best practices and include relevant test cases.
-
-## License
-This project is licensed under the MIT License.
-
----
 
 Happy Testing! 🚀
 
