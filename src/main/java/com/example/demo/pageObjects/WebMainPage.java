@@ -44,14 +44,17 @@ public class WebMainPage extends WebPageObject {
     //isDisplayed Metods
 
     public Boolean isDisplayedLoginButton() {
+        waitUntilElementIsVisible(loginButton);
         return loginButton.isDisplayed();
     }
 
     public Boolean isDisplayedDemoButton() {
+        waitUntilElementIsVisible(demoButton);
         return demoButton.isDisplayed();
     }
 
     public Boolean isDisplayedPlatformTourButton() {
+        waitUntilElementIsVisible(platformTourButton);
         return platformTourButton.isDisplayed();
     }
 }

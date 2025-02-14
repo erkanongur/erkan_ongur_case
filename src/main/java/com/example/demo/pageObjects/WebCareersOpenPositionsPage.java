@@ -22,14 +22,26 @@ public class WebCareersOpenPositionsPage extends WebPageObject{
     @FindBy(css = ".istanbul-turkiye.qualityassurance")
     private List<WebElement> positionListElements;
 
+    @FindBy(css = ".istanbul-turkiye.qualityassurance")
+    private WebElement firstPositionListElement;
+
     @FindBy(className = "position-title")
     private List<WebElement> positionTitleList;
+
+    @FindBy(className = "position-title")
+    private WebElement firstPositionTitle;
 
     @FindBy(className = "position-department")
     private List<WebElement> positionDepartmentList;
 
+    @FindBy(className = "position-department")
+    private WebElement firstPositionDepartment;
+
     @FindBy(className = "position-location")
     private List<WebElement> positionLocationList;
+
+    @FindBy(className = "position-location")
+    private WebElement firstPositionLocation;
 
     @FindBy(linkText = "View Role")
     private WebElement viewRoleButton;
@@ -69,21 +81,25 @@ public class WebCareersOpenPositionsPage extends WebPageObject{
 
     public List<String> getPositionListAsString()
     {
+        waitUntilElementIsVisible(firstPositionListElement);
         return positionListElements.stream().map(WebElement::getText).collect(Collectors.toList());
     }
 
     public List<String> getPositionTitleListAsString()
     {
+        waitUntilElementIsVisible(firstPositionTitle);
         return positionTitleList.stream().map(WebElement::getText).collect(Collectors.toList());
     }
 
     public List<String> getPositionDepartmentListAsString()
     {
+        waitUntilElementIsVisible(firstPositionDepartment);
         return positionDepartmentList.stream().map(WebElement::getText).collect(Collectors.toList());
     }
 
     public List<String> getPositionLocationListAsString()
     {
+        waitUntilElementIsVisible(firstPositionLocation);
         return positionLocationList.stream().map(WebElement::getText).collect(Collectors.toList());
     }
 }
